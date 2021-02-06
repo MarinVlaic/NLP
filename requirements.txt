@@ -1,0 +1,3 @@
+future~=0.18.2
+aitextgen~=0.3.0
+nltk~=3.5

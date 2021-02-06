@@ -1,6 +1,7 @@
 import tkinter as tk
 from model import ai
 import random
+from sentiment import sid
 
 
 class CustomMessageBox(tk.Toplevel):
@@ -22,7 +23,8 @@ class CustomMessageBox(tk.Toplevel):
 
 def click(top, topic, temperature, length, angry, happy):
     generated = ai.generate_one(prompt=topic, max_length=length, temperature=temperature)
-    sentiment = (lambda x: x)(random.randint(0, 1))
+    sentiment = sid.polarity_scores(generated)
+    sentiment = 0 if sentiment['neg'] > sentiment['pos'] else 1
     if sentiment == 0:
         msg = CustomMessageBox(top, generated, angry)
     else:
