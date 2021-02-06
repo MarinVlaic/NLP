@@ -27,19 +27,30 @@ TODO: NAPISAT NESTO
 
 <H2>Application</H2>
 To run application Python version 3.7 or later is needed.
+
 1. run following command to install requirements needed to run the program:
     "pip install -r requirements.txt"
+    
 2. run "nltk_download.py" (Python3 ntlk_download.py) to download sentiment analysis model
+
 3. run "gui.py" to start the application (Python3 gui.py)
+
 4. When application launches your are greeted by "THE MAN" himself. One entry textbox and two sliders are presented:
+    
     * In textbox labeled "Topic" you enter the start of the tweet which model will finish.
+    
     * Temperature slider is used to determine how "wild" we want our model to be. For low temperature values model will rely
 more on the training data, and for higher temperature values it will be more prone to improvising.
+    
     * Tweet length slider is used to determine how long we want to generated tweet to be (number of characters). 
 
 5. Pressing "Trump it!" starts tweet generation. After the tweet is generated based on its sentiment analysis
 one of two windows will open:
+    
     1. Positive window - when tweet's sentiment prediction is positive
+    
     2. Negative window - when tweet's sentiment prediction is negative
+
 6. By pressing "Trump approves" button the sentiment window will close and you can generate another tweet.
+
 7. To exit the program press little x button in the top right corner of the screen.
