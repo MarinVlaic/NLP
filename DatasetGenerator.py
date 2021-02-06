@@ -1,5 +1,3 @@
-from operator import index
-
 import pandas as pd
 
 dataframe = pd.read_csv("./realdonaldtrump.csv")
