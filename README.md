@@ -16,14 +16,15 @@ Resulting dataset contains 17,786 tweets and that is the version that we used to
 <H2>Models used</H2>
 <H3> Tweet generation </H3>
 For tweet generation we fine-tuned pretrained [GPT2 model](https://openai.com/blog/better-language-models/) from openAI.
-We used [aitextgen](https://docs.aitextgen.io/) library for python to which has high level API function calls that allow easy
+We used [aitextgen](https://docs.aitextgen.io/) library for python which has high level API function calls that allow easy
 GPT2 model finetunning and persisting.
 
 GPT2 is openAI's transformer based deep neural network that was pretrained on 40 GB of english text data scraped
 from the internet.
 
 <H3> Sentiment analysis </H3>
-TODO: NAPISAT NESTO
+For sentiment analysis we used [NLTK](https://www.nltk.org/) python library. We used pretrained model to determine the sentiment of the given
+input (in our case generated tweet).
 
 <H2>Application</H2>
 To run application Python version 3.7 or later is needed.
